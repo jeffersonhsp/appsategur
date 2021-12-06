@@ -91,9 +91,7 @@ function atualizaCook(){
 
 
 function block(x){
-	console.log(num_devices);
-	console.log(theMarker[num_devices]);
-	console.log(theMarker[n].isPopupOpen());
+
 	
 	for(var n=0;n < num_devices ; n++){
 	if(theMarker[n].isPopupOpen()) {
@@ -275,7 +273,7 @@ function CarregarJSON() {
                                                     .addTo(map);
                                                 }
                                             
-                                            console.log(theMarker[i]);
+                                            console.log(theMarker[n].isPopupOpen());
                                             var ign = undefined;
                                             var ig = positions[n]["attributes"]["ignition"];
                 
