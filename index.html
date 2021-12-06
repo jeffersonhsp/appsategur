@@ -93,12 +93,12 @@ function atualizaCook(){
 function block(x,z){
   
 		if(confirm("Tem certeza que deseja Desbloquear o veiculo "+devices[z]["name"]+" ?")){
-			if(positions[n]["protocol"] == "mxt"){
+			if(positions[z]["protocol"] == "mxt"){
 				if(x){
 					var json = JSON.stringify({
 										id:33,
 										attributes:{data:"01a733637215002010211021d30004"},
-										deviceId:devices[n]["id"],
+										deviceId:devices[z]["id"],
 										type:"custom",
 										description:"BLOQUEAR#"
 									 })
@@ -106,17 +106,17 @@ function block(x,z){
 									var json = JSON.stringify({
 										id:34,
 										attributes:{data:"01a733637216002010210020fe04"},
-										deviceId:devices[n]["id"],
+										deviceId:devices[z]["id"],
 										type:"custom",
 										description:"DESBLOQUEAR#"
 									 })
 								}
-							}else if(positions[n]["protocol"] == "gt06" || positions[n]["protocol"] == "suntech"){
+							}else if(positions[z]["protocol"] == "gt06" || positions[z]["protocol"] == "suntech"){
 								if(x){
 									var json = JSON.stringify({
 										id:5,
 										attributes:{},
-										deviceId:devices[n]["id"],
+										deviceId:devices[z]["id"],
 										type:"engineStop",
 										description:"BLOQUEAR"
 									 })
@@ -124,7 +124,7 @@ function block(x,z){
 									var json = JSON.stringify({
 										id:6,
 										attributes:{},
-										deviceId:devices[n]["id"],
+										deviceId:devices[z]["id"],
 										type:"engineResume",
 										description:"DESBLOQUEAR"
 									 })
