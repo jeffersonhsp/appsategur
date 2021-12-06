@@ -90,17 +90,14 @@ function atualizaCook(){
 
 
 function block(x){
-var n;
-				var objectLength = Object.keys(devices).length;
-				for(n=0;n<objectLength;n++){
-					if (theMarker[n].isPopupOpen()) {
-						if(confirm("Tem certeza que deseja Desbloquear o veiculo "+devices[n]["name"]+" ?")){
-						    
-						    
-						    
-							if(positions[n]["protocol"] == "mxt"){
-								if(x){
-									var json = JSON.stringify({
+	var objectLength = Object.keys(devices).length;
+	for(var n=0;n<objectLength;n++){
+	alert(theMarker[n]);	
+	if(theMarker[n].isPopupOpen()) {
+		if(confirm("Tem certeza que deseja Desbloquear o veiculo "+devices[n]["name"]+" ?")){
+			if(positions[n]["protocol"] == "mxt"){
+				if(x){
+					var json = JSON.stringify({
 										id:33,
 										attributes:{data:"01a733637215002010211021d30004"},
 										deviceId:devices[n]["id"],
