@@ -94,6 +94,7 @@ function block(x){
 
 	
 	for(var n=0;n < num_devices ; n++){
+	if(theMarker[n] != undefined){
 	if(theMarker[n].isPopupOpen()) {
 		if(confirm("Tem certeza que deseja Desbloquear o veiculo "+devices[n]["name"]+" ?")){
 			if(positions[n]["protocol"] == "mxt"){
@@ -161,7 +162,7 @@ function block(x){
 					
 						}
 					}
-				}	
+				}	}
 }
 
     var devices = [];
@@ -273,7 +274,7 @@ function CarregarJSON() {
                                                     .addTo(map);
                                                 }
                                             
-                                            console.log(theMarker[n].isPopupOpen());
+                                            console.log(theMarker[i].isPopupOpen());
                                             var ign = undefined;
                                             var ig = positions[n]["attributes"]["ignition"];
                 
