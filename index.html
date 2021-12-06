@@ -92,7 +92,7 @@ function atualizaCook(){
 function block(x){
 	var objectLength = Object.keys(devices).length;
 	for(var n=0;n<objectLength;n++){
-	alert(theMarker[n]);	
+	alert(objectLength);	
 	if(theMarker[n].isPopupOpen()) {
 		if(confirm("Tem certeza que deseja Desbloquear o veiculo "+devices[n]["name"]+" ?")){
 			if(positions[n]["protocol"] == "mxt"){
