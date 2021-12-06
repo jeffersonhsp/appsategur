@@ -68,6 +68,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script>
+let num_devices=0;	
 var theMarker = {};
 atualizaCook();
 function atualizaCook(){
@@ -90,9 +91,8 @@ function atualizaCook(){
 
 
 function block(x){
-	var objectLength = Object.keys(devices).length;
-	for(var n=0;n<objectLength;n++){
-	alert(objectLength);	
+
+	for(var n=0;i < num_devices ; i++){
 	if(theMarker[n].isPopupOpen()) {
 		if(confirm("Tem certeza que deseja Desbloquear o veiculo "+devices[n]["name"]+" ?")){
 			if(positions[n]["protocol"] == "mxt"){
@@ -243,7 +243,8 @@ function CarregarJSON() {
                 		success: function(data2) {
                 		devices=data2;
                 		var n;
-                    		for(i=0;i < Object.keys(devices).length;i++){
+				num_devices = Object.keys(devices).length;
+                    		for(var i=0;i < Object.keys(devices).length;i++){
                     		    for(n = 0;n < Object.keys(positions).length;n++){
                     		        if(devices[i]["positionId"] == positions[n]["id"]){ //se existie posiçao valida para o device
                     		            
