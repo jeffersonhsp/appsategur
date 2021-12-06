@@ -90,11 +90,10 @@ function atualizaCook(){
 }
 
 
-function block(x){
-
-	
+function block(x,z){
+  
+	alert(z);
 	for(var n=0;n < num_devices ; n++){
-	if(theMarker[n] != undefined){
 	if(theMarker[n].isPopupOpen()) {
 		if(confirm("Tem certeza que deseja Desbloquear o veiculo "+devices[n]["name"]+" ?")){
 			if(positions[n]["protocol"] == "mxt"){
@@ -162,7 +161,7 @@ function block(x){
 					
 						}
 					}
-				}	}
+				}	
 }
 
     var devices = [];
@@ -274,7 +273,6 @@ function CarregarJSON() {
                                                     .addTo(map);
                                                 }
                                             
-                                            console.log(theMarker[i].isPopupOpen());
                                             var ign = undefined;
                                             var ig = positions[n]["attributes"]["ignition"];
                 
@@ -331,7 +329,7 @@ function CarregarJSON() {
                                                 
 												'<b>Data & Hora:</b> '+d+'-'+M+'-'+a+' '+stringInt+h+
                                                 '<br><b>Velocidade:</b> '+intvel*2+' Km/h.'+linhaBateria+
-                                                ' <br> <input type="button" onclick="block(1)" class="buttSair  fas fa-lock redButt"/> <input type="button" onclick="block(0)" class="buttSair  fas fa-unlock-alt float greenButt"/>'
+                                                ' <br> <input type="button" onclick="block(1,i)" class="buttSair  fas fa-lock redButt"/> <input type="button" onclick="block(0,i)" class="buttSair  fas fa-unlock-alt float greenButt"/>'
                                                 );
                                              
                                         }// caso dispositivo tenha posiçao valida
