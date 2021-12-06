@@ -93,7 +93,7 @@ function block(x){
 var n;
 				var objectLength = Object.keys(devices).length;
 				for(n=0;n<objectLength;n++){
-					if (theMarker[n].isPopupOpen()) {
+					if (theMarker[n]._popup._isOpen) {
 						if(confirm("Tem certeza que deseja Desbloquear o veiculo "+devices[n]["name"]+" ?")){
 						    
 						    
