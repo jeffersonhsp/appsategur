@@ -92,10 +92,7 @@ function atualizaCook(){
 
 function block(x,z){
   
-	alert(z);
-	for(var n=0;n < num_devices ; n++){
-	if(theMarker[n].isPopupOpen()) {
-		if(confirm("Tem certeza que deseja Desbloquear o veiculo "+devices[n]["name"]+" ?")){
+		if(confirm("Tem certeza que deseja Desbloquear o veiculo "+devices[z]["name"]+" ?")){
 			if(positions[n]["protocol"] == "mxt"){
 				if(x){
 					var json = JSON.stringify({
@@ -160,8 +157,6 @@ function block(x,z){
 							
 					
 						}
-					}
-				}	
 }
 
     var devices = [];
